@@ -14,7 +14,7 @@ public class Secret implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", nullable = false, unique = true)
+    @Column(name = "SECRET_ID", nullable = false, unique = true)
     private Integer id;
 
     @Column(name = "VALUE", nullable = false)
@@ -26,8 +26,8 @@ public class Secret implements Serializable {
     @Column(name = "SURNAME")
     private String surname;
 
-    @Column(name = "OWNER", nullable = false, unique = true)
-    @OneToMany
-    @JoinColumn(name="USER", nullable=false)
-    private User owner;
+
+    @ManyToOne
+    @JoinColumn(name="OWNER_ID", nullable=false)
+    private Owner owner;
 }

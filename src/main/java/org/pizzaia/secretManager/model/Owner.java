@@ -5,16 +5,17 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
+@Entity
+@Table(name = "OWNER")
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "USER")
-public class User implements Serializable {
+public class Owner implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", nullable = false, unique = true)
+    @Column(name = "Owner_ID", nullable = false, unique = true)
     private Integer id;
 
     @Column(name = "USERNAME", nullable = false, unique = true)
