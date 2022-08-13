@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SecretRepository extends JpaRepository<Secret, Integer> {
+    Secret getSecretByNameAndOwnerUsername(String name, String username);
 }

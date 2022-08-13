@@ -27,6 +27,7 @@ dependencies {
     runtimeOnly 'org.postgresql:postgresql'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+    implementation 'com.auth0:java-jwt:4.0.0'
 }
 
 test {
